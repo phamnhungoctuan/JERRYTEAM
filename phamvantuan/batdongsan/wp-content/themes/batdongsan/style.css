@@ -774,7 +774,7 @@ p.center{
     height: 13px;
     margin-left: 20px;
     top: 3px;
-    background: url(<?php echo tuanpham_url(); ?>img/bt-control.svg) center center no-repeat;
+    background: url(img/bt-control.svg) center center no-repeat;
     transition: all .25s ease-in-out;
 }
 .bt-control, .bt-control:after, .bt-submit, .inline-block {
@@ -933,7 +933,7 @@ span{
     -ms-transform: rotateY(180deg) scale(0.5, 0.5);
     -o-transform: rotateY(180deg) scale(0.5, 0.5);
     transform: rotateY(180deg) scale(0.5, 0.5);
-    background: url(<?php echo tuanpham_url(); ?>img/icon-zoom.svg) no-repeat center;
+    background: url(img/icon-zoom.svg) no-repeat center;
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     -moz-opacity: 0;

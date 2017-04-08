@@ -206,7 +206,7 @@ if(!function_exists('tuanpham_url')){
 		return get_site_url()."/wp-content/themes/batdongsan/";
 	}
 }
-
+add_filter('show_admin_bar', '__return_false');
 //require( trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.php' );
 
 /**
