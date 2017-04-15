@@ -1,14 +1,64 @@
-<!-- <?php wp_footer(); ?> -->
+<div class="container box-10">
+	<div class="row">
+	<div class="colbox">
+		<div class="col-md-7">
+			<div class="pol-1">
+				<div class="col-md-12">
+					<span class="bux"><img src="<?php echo tuanpham_url();?>/img/hot.png" alt=""></span>
+					<p class="bux">Nhận Đăng Kí – Dự Án Lux garden Quận 7</p>
+					<span><img src="<?php echo tuanpham_url();?>/img/hot.png" alt=""></span>
+				</div>
+				
+				<div class="col-md-12">
+					<p>Hoàn Tiền lại 100% nếu Bạn không chọn được căn</p>
+				</div>
+				<div class="col-md-12">
+				<span class="bux"><img src="<?php echo tuanpham_url();?>/img/moi.png" alt=""></span>
+				<div class="bux"><p>Đăng Ký Tham Quan Nhà Mẫu Ngay </p></div>
+				<span><img src="<?php echo tuanpham_url();?>/img/moi.png" alt=""></span>
+				</div>
+				<div class="col-md-12">
+				<span class="bux"><img src="<?php echo tuanpham_url();?>/img/moi.png" alt=""></span>
+				<p class="bux">100% Khác Hàng Được Tặng 1 Chiếc Air Blade với Block B </p>
+				<span><img src="<?php echo tuanpham_url();?>/img/moi.png" alt=""></span>
+				</div>
+				<div class="col-md-12">
+				<span class="bux"><img src="<?php echo tuanpham_url();?>/img/moi.png" alt=""></span>
+				<p class="bux">20 Suất Ưu Đãi cuối cùng cho Khách Hàng cũ CK 3%  </p>
+				<span><img src="<?php echo tuanpham_url();?>/img/moi.png" alt=""></span>
+				</div>
+				<div class="col-md-12">
+					<p>(Nhấp Chuột để đăng ký tham quan dự án Lux garden và cập nhật thêm thông tin)</p>
+				</div>
+				<div class="xem-them">
+					<a href="#">
+						<img src="<?php echo tuanpham_url();?>/img/xembaogia.png" alt="">
+					</a>
+				</div>
+				<div class="hot-line">
+					<p>Hoặc có thể Liên Hệ Trực Tiếp qua</p> 
+					<p>HOTLINE : 0938.656.736
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-5">
+			<img src="<?php echo tuanpham_url();?>/img/DTMH.png" alt="">
+			<p>Tôi Là Đỗ Trần Mỹ Hằng – Hiện Tại Đang là Trưởng Phòng Kinh Doanh của Tập Đoàn Đất Xanh, Với quan điểm luôn đem đến những điều tốt đẹp nhất cho khách hàng, sẽ hỗ trợ bạn một cách tận tâm nhất từ dự án cho đến tư vấn tài chính, sẽ giúp bạn tìm ra bài toán tài chính tốt nhất để bạn có thể yên tâm khi sở hữu cho mình một căn hộ tại Luxgarden.</p>
+		</div>
+	</div>
+	</div>
+</div>
 
 <div class="container">
 		<div class="footer col-md-12">
 			<div class="col-md-2 col-xs-2">
-				<img src="<?php echo tuanpham_url();?>img/luxgarden-logo.svg">
+				<img src="<?php echo ot_get_option('logo');?>">
 			</div>
 			<div class="col-md-7 col-xs-7">
-				<p>370 Nguyễn Văn Quỳ, P. Phú Thuận, Quận 7, TP. HCM</p>
-				<p>Hotline: <e style="color: #e35720">0979.728.820</e	></p>
-				<p>Email: <a href="">luxgarden.contact@gmail.com</a></p>
+				<p><?php echo ot_get_option('__a_ch_');?></p>
+				<p>Hotline: <e style="color: #e35720"><?php echo ot_get_option('hotline');?></e	></p>
+				<p>Email: <a href=""><?php echo ot_get_option('email');?></a></p>
 			</div>
 			<div class="col-md-3 col-xs-3">
 				<ul>
@@ -20,9 +70,6 @@
 	</div>
 	<div id="lbl_home_footer_coppyright" class="coppyright-info">© 2017 LUXGARDEN. All Right Reserved.</div>
 </div>
-
-
-
 <script>
 	$(document).ready(function(){
 	$("#btn-close").hide();
@@ -198,6 +245,18 @@
 
 </script>
 <script>
+    $(document).ready(function() {
+    $(".tabs-menu a").click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+});
+</script>
+<script>
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -207,5 +266,6 @@ function myFunction() {
     }
 }
 </script>
+<?php wp_footer(); ?>
 </body>
 </html>

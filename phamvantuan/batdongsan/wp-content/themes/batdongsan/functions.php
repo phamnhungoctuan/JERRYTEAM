@@ -29,11 +29,8 @@ if(!isset($content_width)){
 if(!function_exists('tuanpham_theme_setup')){
 	function tuanpham_theme_setup(){
 		$language_folder = THEME_URL. 'languages';
-
 		add_theme_support('automatic-feed-links');
-
 		add_theme_support('post-thumbnails');
-
 		add_theme_support('post-formats',array(
 			'image',
 			'video',
@@ -43,56 +40,61 @@ if(!function_exists('tuanpham_theme_setup')){
 			));
 		add_theme_support('title-tag');
 		$defaults = array(
-		'default-color'          => '',
-		'default-image'          => '',
-		'wp-head-callback'       => '_custom_background_cb',
-		'admin-head-callback'    => '',
-		'admin-preview-callback' => ''
-		);
+			'default-color'          => '',
+			'default-image'          => '',
+			'wp-head-callback'       => '_custom_background_cb',
+			'admin-head-callback'    => '',
+			'admin-preview-callback' => ''
+			);
 		add_theme_support( 'custom-background', $defaults );
 		add_theme_support( 'custom-header' );
-		register_nav_menu('primary-menu',__('Primary Menu','tuanpham'));
-	
+		register_nav_menu('primary-menu',__('Primary Menu','batdongsan'));
+		register_nav_menu('menu-page',__('Primary Menu 2','batdongsan'));
 
-	function register_my_menu() {
-  register_nav_menu('header-menu',__( 'Header Menu','tuanpham'));
-}
-add_action( 'init', 'register_my_menu' );
-
-
+		add_action( 'init', 'register_my_menu' );
 		add_theme_support( 'custom-logo' );
-
 		add_theme_support( 'custom-logo', array(
-		'height'      => 100,
-		'width'       => 400,
-		'flex-height' => true,
-		'flex-width'  => true,
-		'header-text' => array( 'site-title', 'site-description' ),
-		) );
+			'height'      => 100,
+			'width'       => 400,
+			'flex-height' => true,
+			'flex-width'  => true,
+			'header-text' => array( 'site-title', 'site-description' ),
+			) );
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
-
 		$sidebar = array(
-	        'name' => __('Main sidebar','tuanpham'),
-	        'id' => "main-sidebar",
-	        'description' => '',
-	        'class' => 'main-sidebar',
-	        'before_title' => '<h2 class="widgettitle">',
-	        'after_title' => "</h2>\n",
-	    );
+			'name' => __('Main sidebar','tuanpham'),
+			'id' => "main-sidebar",
+			'description' => '',
+			'class' => 'main-sidebar',
+			'before_title' => '<h2 class="widgettitle">',
+			'after_title' => "</h2>\n",
+			);
 		register_sidebar($sidebar);
-
 	}
 	add_action('init','tuanpham_theme_setup');
+
 }
 if(!function_exists('tuanpham_menu')){
 	function tuanpham_menu($menu){
 		$menu = array(
 			'theme_location'=>$menu,
-			'container_class'=>'sub-menu',
-			 'menu_class'=> 'mainmenu pull-left',
-    		'items_wrap' => '<ul class="menutop">%3$s<li><a href="#search"><img src="http://i.imgur.com/EdH3xiN.png"></a></li></ul>',);
+		
+			'items_wrap'=>'<div class="col-md-10 left"><ul class="list-menu"><li id="home"><a href="http://localhost/jerryteam/phamvantuan/batdongsan/" title=""><i class="fa fa-home" aria-hidden="true"></i></a></li>%3$s</ul></div>'
+
+
+			);
 		wp_nav_menu($menu);
-		}
+	}
+}
+if(!function_exists('tuanpham_menu2')){
+	function tuanpham_menu2(){
+		$menu = array(
+			'theme_location'=>'menu-page',
+			'container_class'=>'list-T',
+			'menu_class' => 'menu-1',
+			);
+		wp_nav_menu($menu);
+	}
 }
 
 function tp_has_featured_posts() {
@@ -138,9 +140,9 @@ function mytheme_custom_thumbnail_size(){
 if(!function_exists('tuanpham_entry_header')){ 
 	function tuanpham_entry_header(){?>
 		<?php if( is_single() ) : ?>
-		<hr><h1 class="entry-title"><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h1><hr>
+		<hr><h1 class="entry-title"><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h1>
 		<?php else: ?>
-		<hr><h2 class="entry-title" style="text-align: center;"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"> <?php the_title();?></a></h2><hr>
+		<h2 class="entry-title" style="text-align: center;"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"> <?php the_title();?></a></h2><hr>
 		<?php endif; ?>
 		<?php }
 }
@@ -149,7 +151,7 @@ if(!function_exists('tuanpham_entry_meta')){
 	function tuanpham_entry_meta() { ?>
 		<?php if (!is_page()) :?>
 				<?php 
-					printf(__('<span class="date-published">%1$s ','tuanpham'),get_the_date());
+					printf(__('<p style="text-align:center" class="date-published">%1$s ','tuanpham'),get_the_date());
 				?>
 				<?php endif;?>
 	<?php }
@@ -166,6 +168,18 @@ if(!function_exists('tuanpham_entry_content')){
 		
 	}
 }
+function excerpt($limit) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt).'...';
+  } else {
+    $excerpt = implode(" ",$excerpt);
+  } 
+  $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+  return $excerpt;
+}
+
 
 if(!function_exists('tuanpham_entry_tag')){ 
 	function tuanpham_entry_tag(){
@@ -183,20 +197,10 @@ function tuanpham_style(){
 
 		wp_register_style('reponsive-style',THEME_URL."/reponsive.css",'all');
 		 wp_enqueue_style('reponsive-style');
-
-
-
-
-
-
-
 }
 add_action('wp_enqueue_scripts','tuanpham_style');
 
-function wpdocs_scripts_method() {
-    
-}
-add_action( 'wp_enqueue_scripts', 'wpdocs_scripts_method' );
+
 
 
 
@@ -208,8 +212,19 @@ if(!function_exists('tuanpham_url')){
 }
 add_filter('show_admin_bar', '__return_false');
 //require( trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.php' );
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+     if( in_array('current-menu-item', $classes) ){
+             $classes[] = 'active ';
+     }
+     return $classes;
+}
+
+
+
+add_filter( 'ot_theme_mode', '__return_true' );
 
 /**
- * Loads Theme Options
+ * Required: include OptionTree.
  */
-//require( trailingslashit( get_template_directory() ) . 'option-tree/theme-options.php' );
+require( trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.php' );
