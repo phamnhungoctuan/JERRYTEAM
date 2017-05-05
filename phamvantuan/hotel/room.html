@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reponsive.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/jssor.slider-23.1.3.mini.js" type="text/javascript"></script>
+</head>
+<body>
+<script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,x:0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Cols:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Rows:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Cols:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Rows:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:3,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:3,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:12,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:12,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $Cols: 10,
+                $SpacingX: 8,
+                $SpacingY: 8,
+                $Align: 360
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*responsive code begin*/
+            /*remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 800);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*responsive code end*/
+        });
+    </script>
+    <style>
+        /* jssor slider arrow navigator skin 05 css */
+        /*
+        .jssora05l                  (normal)
+        .jssora05r                  (normal)
+        .jssora05l:hover            (normal mouseover)
+        .jssora05r:hover            (normal mouseover)
+        .jssora05l.jssora05ldn      (mousedown)
+        .jssora05r.jssora05rdn      (mousedown)
+        .jssora05l.jssora05lds      (disabled)
+        .jssora05r.jssora05rds      (disabled)
+        */
+        .jssora05l, .jssora05r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background: url('img/a17.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora05l { background-position: -10px -40px; }
+        .jssora05r { background-position: -70px -40px; }
+        .jssora05l:hover { background-position: -130px -40px; }
+        .jssora05r:hover { background-position: -190px -40px; }
+        .jssora05l.jssora05ldn { background-position: -250px -40px; }
+        .jssora05r.jssora05rdn { background-position: -310px -40px; }
+        .jssora05l.jssora05lds { background-position: -10px -40px; opacity: .3; pointer-events: none; }
+        .jssora05r.jssora05rds { background-position: -70px -40px; opacity: .3; pointer-events: none; }
+        /* jssor slider thumbnail navigator skin 01 css *//*.jssort01 .p            (normal).jssort01 .p:hover      (normal mouseover).jssort01 .p.pav        (active).jssort01 .p.pdn        (mousedown)*/.jssort01 .p {    position: absolute;    top: 0;    left: 0;    width: 72px;    height: 72px;}.jssort01 .t {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;    border: none;}.jssort01 .w {    position: absolute;    top: 0px;    left: 0px;    width: 100%;    height: 100%;}.jssort01 .c {    position: absolute;    top: 0px;    left: 0px;    width: 68px;    height: 68px;    border: #000 2px solid;    box-sizing: content-box;    background: url('img/t01.png') -800px -800px no-repeat;    _background: none;}.jssort01 .pav .c {    top: 2px;    _top: 0px;    left: 2px;    _left: 0px;    width: 68px;    height: 68px;    border: #000 0px solid;    _border: #fff 2px solid;    background-position: 50% 50%;}.jssort01 .p:hover .c {    top: 0px;    left: 0px;    width: 70px;    height: 70px;    border: #fff 1px solid;    background-position: 50% 50%;}.jssort01 .p.pdn .c {    background-position: 50% 50%;    width: 68px;    height: 68px;    border: #000 2px solid;}* html .jssort01 .c, * html .jssort01 .pdn .c, * html .jssort01 .pav .c {    /* ie quirks mode adjust */    width /**/: 72px;    height /**/: 72px;}
+    </style>
+<header>
+	<div id="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="icon-top">
+						<ul>
+							<li><a href=""><i class="fa fa-envelope" aria-hidden="true"></a></i></li>
+							<li><a href=""><i class="fa fa-bell" aria-hidden="true"></a></i></li>
+							<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></a></i></li>
+							<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></a></i></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="menu">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-md-3">
+					<h4>KY ANH <span>MOTEL</span></h4>
+				</div>
+				<div class="col-sm-9 col-md-9">
+					<div id="menu">
+						<ul>
+							<li><a href="">TRANG CHỦ</a></li>
+							<li><a href="">GIỚI THIỆU</a></li>
+							<li><a href="">GALLERY</a></li>
+							<li><a href="">XEM PHÒNG</a></li>
+							<li><a href="">ĐẶT PHÒNG</a></li>
+							<li><a href="a">NHÀ HÀNG</a></li>
+							<li><a href="">HẢI SẢN</a></li>
+							<li><a href="">LIÊN HỆ</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="menu-mobie">
+		<div class="topnav" id="myTopnav">
+		    <a href="#home">KY ANH Motel</a>
+		    <a href="#news">GIỚI THIỆU</a>
+		    <a href="#contact">GALLERY</a>
+		    <a href="#about">XEM PHÒNG</a>
+		    <a href="#about">ĐẶT PHÒNG</a>
+		    <a href="#about">NHÀ HÀNG</a>
+		    <a href="#about">HẢI SẢN</a>
+		    <a href="#">LIÊN HỆ</a>
+		    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+	</div>
+	<div class="banner-page">
+		<div id="banner-page">
+			
+		</div>
+	</div>
+</header>
+<div class="content">
+	<div class="single-room">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">	
+					<div id="title-page">
+						<p>PHÒNG ĐƠN <span>(SINGLE ROOM)</span></p>
+					</div>
+					<div class="slide">
+						<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:800px;height:456px;overflow:hidden;visibility:hidden;background-color:#24262e;">
+				        <!-- Loading Screen -->
+				        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+				            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+				            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+				        </div>
+				        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:800px;height:356px;overflow:hidden;">
+				            <div>
+				                <img data-u="image" src="img/01.jpg" />
+				                <img data-u="thumb" src="img/thumb-01.jpg" />
+				            </div>
+				            <div>
+				                <img data-u="image" src="img/02.jpg" />
+				                <img data-u="thumb" src="img/thumb-02.jpg" />
+				            </div>
+				            <div>
+				                <img data-u="image" src="img/03.jpg" />
+				                <img data-u="thumb" src="img/thumb-03.jpg" />
+				            </div>
+				            <div>
+				                <img data-u="image" src="img/04.jpg" />
+				                <img data-u="thumb" src="img/thumb-04.jpg" />
+				            </div>
+				            <div>
+				                <img data-u="image" src="img/05.jpg" />
+				                <img data-u="thumb" src="img/thumb-05.jpg" />
+				            </div>
+				            <div>
+				                <img data-u="image" src="img/06.jpg" />
+				                <img data-u="thumb" src="img/thumb-06.jpg" />
+				            </div>
+				            <div>
+				                <img data-u="image" src="img/07.jpg" />
+				                <img data-u="thumb" src="img/thumb-07.jpg" />
+				            </div>
+				            <div>
+				                <img data-u="image" src="img/08.jpg" />
+				                <img data-u="thumb" src="img/thumb-08.jpg" />
+				            </div>
+				            <div>
+				                <img data-u="image" src="img/09.jpg" />
+				                <img data-u="thumb" src="img/thumb-09.jpg" />
+				            </div>
+				            <div>
+				                <img data-u="image" src="img/10.jpg" />
+				                <img data-u="thumb" src="img/thumb-10.jpg" />
+				            </div>
+				            <div>
+				                <img data-u="image" src="img/11.jpg" />
+				                <img data-u="thumb" src="img/thumb-11.jpg" />
+				            </div>
+				            <div>
+				                <img data-u="image" src="img/12.jpg" />
+				                <img data-u="thumb" src="img/thumb-12.jpg" />
+				            </div>
+				        </div>
+				        <!-- Thumbnail Navigator -->
+				        <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
+				            <!-- Thumbnail Item Skin Begin -->
+				            <div data-u="slides" style="cursor: default;">
+				                <div data-u="prototype" class="p">
+				                    <div class="w">
+				                        <div data-u="thumbnailtemplate" class="t"></div>
+				                    </div>
+				                    <div class="c"></div>
+				                </div>
+				            </div>
+				            <!-- Thumbnail Item Skin End -->
+				        </div>
+				        <!-- Arrow Navigator -->
+				        <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
+				        <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
+				    </div>
+				    <!-- #endregion Jssor Slider End -->
+					</div>	
+					
+				</div>
+				<div class="col-md-6">
+					<div id="title-khach">
+						<p>KHÁCH SẢN KỲ ANH</p>
+					</div>
+					<div id="word-1">
+						<p>Khách sạn chúng tôi bao gồm 15 phòng đơn với thiết kế sang trọng, tiện nghi phù hợp với mọ đối tượng. </p>
+						<p>Phòng đơn với diện tích 30m2
+						Tiện nghi đầy đủ, sạch sẽ.</p>
+					</div>
+					<div id="word-2">
+						<p>GIƯỜNG/BED : <span>1 Giường</span></p>
+						<p>TỐI ĐA/MAX : <span> 2 Người ở</span></p>
+						<p>GÍA/PRICE : <span>Liên hệ để được tư vấn</span></p>
+					</div>
+					<div id="word-4">
+						<p>0234.123 456</p>
+						<a href="#">ĐẶT PHÒNG</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="other-room">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="title-page">
+						<p>PHÒNG ĐƠN <span>(SINGLE ROOM)</span></p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div id="none">
+						<img src="img/other-room.png" alt="">
+						<div id="hover">
+							<a href="#">XEM</a>
+						</div>
+						<div class="word1">
+							<p>PHÒNG ĐÔI</p>
+							<span>(Double room)</span>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-md-6">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="boxx">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-1">
+					
+				</div>
+				<div class="col-md-3">
+					<div id="title-page">
+						<h4>Address</h4>
+					</div>
+					<div id="word-fot">
+						<p>1234 Street Name
+						City, AA 99999</p>
+					</div>
+					<div id="title-page">
+						<h4>Contacts</h4>
+					</div>
+					<div id="word-fot">
+						<p>Email: support@mobirise.com</p>
+						<p>Phone: +1 (0) 000 0000 001</p>
+						<p>Fax: +1 (0) 000 0000 002</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div id="title-page">
+						<h4>Links</h4>
+					</div>
+					<div id="list-fot">
+						<ul>
+							<li>
+								Website builder
+							</li>
+							<li>
+								Download for Windows
+							</li>
+							<li>
+								Download for Mac
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="title-form">
+						<h4>Email*</h4>
+					</div>
+					<div id="input-1">
+						<input type="text">
+					</div>
+					<div id="title-form">
+						<h4>Message</h4>
+					</div>
+					<div id="input-2">
+						<textarea class="form-control" style="height: 130px; margin: 0px -1px 0px 0px; width: 540px;"></textarea>
+					</div>
+					<div id="contact">
+						<a href="#">Contact us</a>
+					</div>
+				</div>
+				<div class="col-md-1">
+					
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div id="bottom">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-1">
+					
+				</div>
+				<div class="col-md-5">
+					<p>2017 All RIghts Reserved. Terms of use and Privacy Policy</p>
+				</div>
+				<div class="col-md-5">
+					<div id="lienhe">
+						<ul>
+							<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+							<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+							<li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-1">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+<script>
+	$(document).ready(function(ev){
+    var items = $(".nav li").length;
+    var leftRight=0;
+    if(items>5){
+        leftRight=(items-5)*50*-1;
+    }
+    $('#custom_carousel').on('slide.bs.carousel', function (evt) {
+        
+ 
+      $('#custom_carousel .controls li.active').removeClass('active');
+      $('#custom_carousel .controls li:eq('+$(evt.relatedTarget).index()+')').addClass('active');
+    })
+    $('.nav').draggable({ 
+        axis: "x",
+         stop: function() {
+            var ml = parseInt($(this).css('left'));
+            if(ml>0)
+            $(this).animate({left:"0px"});
+                if(ml<leftRight)
+                    $(this).animate({left:leftRight+"px"});
+                    
+        }
+      
+    });
+});
+</script>
+</body>
+</html>
