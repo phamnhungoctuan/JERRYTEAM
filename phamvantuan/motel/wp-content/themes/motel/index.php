@@ -72,8 +72,7 @@
 									'page_id' => 13,
 
 							));
-							if($restaurant->have_posts()){
-								$restaurant->the_post();
+							if($restaurant->have_posts()){$restaurant->the_post();
 							 ?>
 							}
 

@@ -17,9 +17,8 @@ if ( function_exists('yoast_breadcrumb') ) {
 	<?php else: ?>
 		<?php get_template_part('content','none'); ?>
 	<?php endif; ?>
-	</div>
+	
 		
-</div>
 
 
 <?php
